@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUNCHBAG-GAME</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="vue-app">
+        <!-- bag image -->
+        <div id="bag" v-bind:class="{ burst: ended }"></div>
+
+
+        <!-- bag health bar -->
+        <div id="bag-health">
+            <div id="item" v-bind:style="{ width: health + '%' }" style="background-color: green;"></div>
+        </div>
+
+        <!-- game control buttons -->
+        <div id="controls">
+            <button v-on:click="punch" v-show="!ended">Punch</button>
+            <button v-on:click="restart">Restart</button>
+        </div>
+    </div>
+    <script src="app.js">
+
+    </script>
+</html>
